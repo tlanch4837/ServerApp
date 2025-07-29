@@ -21,11 +21,16 @@ The GUI also respects the following optional environment variables:
 
 ## Starting the NeoForge server
 
+
 On **Windows 11** you can launch the server with:
+=======
+On Windows you can launch the server with:
+
 
 ```bat
 run.bat
 ```
+
 
 Double click `run.bat` or execute it from Command Prompt/PowerShell. The script
 passes the necessary JVM arguments. Edit `user_jvm_args.txt` for custom options.
@@ -37,6 +42,13 @@ passes the necessary JVM arguments. Edit `user_jvm_args.txt` for custom options.
    ```powershell
    cd gui
    ```
+=======
+The script passes the necessary JVM arguments. Edit `user_jvm_args.txt` for custom options.
+
+## Starting the GUI
+
+1. Open a terminal in the `gui/` directory.
+
 2. Install dependencies (only required once):
    ```bash
    npm install
@@ -47,12 +59,16 @@ passes the necessary JVM arguments. Edit `user_jvm_args.txt` for custom options.
    ```
    or run `node server.js` directly.
 
+
 4. Open your browser and navigate to `http://localhost:3000` (or whatever
    `APP_PORT` you configured). The interface will display command buttons and
    drop-down selectors.
 
 The server fetches the list of available commands over RCON and renders a button
 for each one so you can trigger them with a click.
+=======
+Once running, open `http://localhost:3000` (or your configured `APP_PORT`) in your browser. You should see the command interface with buttons and dropdowns. The server fetches the list of available commands over RCON and renders a button for each one.
+
 
 ## Example button commands
 
@@ -72,6 +88,7 @@ The exact buttons depend on what commands your server exposes, but typical usefu
 - `whitelist add <player>` / `whitelist remove <player>`
 - `op <player>` / `deop <player>`
 - `difficulty peaceful` / `difficulty hard`
+
 - `effect give <player> minecraft:night_vision 30`
 - `kill <player>`
 - `locate biome <biome>`
@@ -82,6 +99,8 @@ The exact buttons depend on what commands your server exposes, but typical usefu
 - `clear <player>`
 - `defaultgamemode survival`
 - `seed`
+=======
+
 
 Commands can be combined with the player and item selectors where appropriate. The search field shows item sprites sourced from minecraft.wiki for convenience.
 

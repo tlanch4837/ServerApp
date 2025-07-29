@@ -47,14 +47,14 @@ app.get('/players', async (req, res) => {
     const output = await rcon.send('list');
     const match = output.match(/players online:\s*(.*)/i);
     const players = match && match[1] ? match[1].split(/,\s*/) : [];
-    res.json({ players });
+    res.json(players);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
 app.get('/commands', (req, res) => {
-  res.json({ commands: availableCommands });
+  res.json(availableCommands);
 });
 
 const port = process.env.APP_PORT || 3000;

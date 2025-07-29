@@ -1,0 +1,29 @@
+#search-container {
+  position: relative;
+  max-width: 300px;
+}
+
+#results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  display: none;
+}
+
+#results li {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+#results li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}

@@ -42,7 +42,12 @@ The script passes the necessary JVM arguments. Edit `user_jvm_args.txt` for cust
    ```
    or run `node server.js` directly.
 
-Once running, open `http://localhost:3000` (or your configured `APP_PORT`) in your browser. You should see the command interface with buttons and dropdowns. The server fetches the list of available commands over RCON and renders a button for each one.
+4. Open your browser and navigate to `http://localhost:3000` (or whatever
+   `APP_PORT` you configured). The interface will display command buttons and
+   drop-down selectors.
+
+The server fetches the list of available commands over RCON and renders a button
+for each one so you can trigger them with a click.
 
 ## Example button commands
 
@@ -62,6 +67,16 @@ The exact buttons depend on what commands your server exposes, but typical usefu
 - `whitelist add <player>` / `whitelist remove <player>`
 - `op <player>` / `deop <player>`
 - `difficulty peaceful` / `difficulty hard`
+- `effect give <player> minecraft:night_vision 30`
+- `kill <player>`
+- `locate biome <biome>`
+- `setblock <x> <y> <z> minecraft:stone`
+- `summon minecraft:zombie`
+- `title <player> title {"text":"Hello"}`
+- `xp add <player> 10 levels`
+- `clear <player>`
+- `defaultgamemode survival`
+- `seed`
 
 Commands can be combined with the player and item selectors where appropriate. The search field shows item sprites sourced from minecraft.wiki for convenience.
 
